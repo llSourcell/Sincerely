@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="EAk-G7-X2A">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="08n-25-oi1">
+            <objects>
+                <viewController id="EAk-G7-X2A" customClass="CRViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lfD-Io-c4q"/>
+                        <viewControllerLayoutGuide type="bottom" id="BS5-k7-iq5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vCG-4Q-TFv">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="beautiful-forest.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YA6-XY-axc">
+                                <rect key="frame" x="0.0" y="20" width="568" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3OE-EJ-kKQ">
+                                <rect key="frame" x="0.0" y="20" width="568" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="IaN-o4-5nx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLP-Hv-ikx">
+                                <rect key="frame" x="398" y="290" width="139" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Select a Panorama">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnOpenImagePicker:" destination="EAk-G7-X2A" eventType="touchUpInside" id="6Bc-5B-gLT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fV-R8-WFJ">
+                                <rect key="frame" x="40" y="527" width="239" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send to Sincerely">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendtoSincerely:" destination="EAk-G7-X2A" eventType="touchUpInside" id="nRT-rA-cKi"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="refresh_icon_scalable_vector_graphics_svg-1969px.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vba-Zp-FAm">
+                                <rect key="frame" x="105" y="153" width="109" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="iLP-Hv-ikx" secondAttribute="bottom" constant="66" id="ADO-jq-K8x"/>
+                            <constraint firstItem="3OE-EJ-kKQ" firstAttribute="leading" secondItem="vCG-4Q-TFv" secondAttribute="leading" id="U6O-Mb-aDd"/>
+                            <constraint firstItem="3OE-EJ-kKQ" firstAttribute="top" secondItem="vCG-4Q-TFv" secondAttribute="top" constant="20" symbolic="YES" id="ZGs-fc-aMT"/>
+                            <constraint firstItem="iLP-Hv-ikx" firstAttribute="centerX" secondItem="3OE-EJ-kKQ" secondAttribute="centerX" id="ue1-la-7Km"/>
+                            <constraint firstItem="3OE-EJ-kKQ" firstAttribute="trailing" secondItem="vCG-4Q-TFv" secondAttribute="trailing" id="yeI-LJ-BRx"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="selectedImage" destination="3OE-EJ-kKQ" id="JMX-J1-izO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drs-8A-RaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="781" y="-60"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="beautiful-forest.jpg" width="600" height="445"/>
+        <image name="refresh_icon_scalable_vector_graphics_svg-1969px.png" width="1969" height="1410"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
